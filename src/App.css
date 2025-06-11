@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #111;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+nav {
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+nav .title h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+nav .home-link a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1.1rem;
+    transition: border-color 0.2s;
+    padding-bottom: 2px;
+}
+
+nav .home-link a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* ProjectCard - Carousel */
+
+.carousel-container {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #fff;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s;
+    height: 100%;
+    width: 100%;
+}
+
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #111;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+.project-card {
+    position: relative;
+    min-width: 100vw;
+    height: 100%;
+    flex: 0 0 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2rem;
+    background: #fff;
+}
+
+.project-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    position: relative;
+}
+
+.project-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    align-self: flex-start;
+}
+
+.project-card p {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    margin: 0;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.project-card .project-spans {
+    margin: 1.5rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.project-card span {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    border-radius: 16px;
+    padding: 0.3em 1em;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.project-card a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.7em 2em;
+    background: #8d89893d;
+    color: #111;
+    border: none;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    border-bottom: 2px solid transparent;
+}
+
+.project-card a:hover {
+    border-bottom: 2px solid #111;
+}
+
+.project-card-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.project-card-image img {
+    max-width: 90%;
+    max-height: 60vh;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ProjectDetail */
+
+.project-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #111;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    border-radius: 16px;
+    max-width: 700px;
+    margin: 3rem auto;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+}
+
+.project-detail h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.project-detail h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    color: #444;
+}
+
+.project-detail img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.project-detail p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.project-detail>div {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.project-detail span {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    border-radius: 16px;
+    padding: 0.3em 1em;
+    margin-right: 0.5em;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
